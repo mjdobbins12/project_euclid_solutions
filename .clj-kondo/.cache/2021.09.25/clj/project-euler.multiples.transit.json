@@ -1,0 +1,1 @@
+["^ ","~$multiples-of-3-or-5",["^ ","~:row",3,"~:col",1,"~:fixed-arities",["~#set",[1]],"~:name","^0","~:ns","~$project-euler.multiples","~:top-ns","^7"],"~:filename","C:\\Users\\onefi\\source\\repos\\project-euler\\src\\project_euler\\multiples.clj"]
