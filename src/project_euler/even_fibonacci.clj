@@ -8,8 +8,7 @@
          acc [1 2]]
     (if (> (+ x y) limit)
       acc
-      (recur y (+ x y) (conj acc (+ x y))))
-    ))
+      (recur y (+ x y) (conj acc (+ x y))))))
 
 (defn sum-even-fib
   "Gives the sum of even members of the fibonacci series below a specified limit"
