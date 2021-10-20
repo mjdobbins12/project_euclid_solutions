@@ -1,18 +1,13 @@
 (ns project-euler.largest-prime-factor)
 
-(defn largest-factor
+(defn prime-sieve
   [x]
-  (loop [f (int (Math/floor (Math/sqrt x)))]
-    (if (= (mod x f) 0)
-      f
-      (recur (- f 1)))))
-
-(defn factorize
-  [x]
-  (loop [f (largest-factor x)
+  (loop [num (range 2 (inc x))
          acc []]
-    (if (= (f) 1)
-      f
-      (recur (- f 1)))))
-
+    (if (empty? num)
+      acc
+      (recur (filter
+              #(not= (mod % (first num)) 0)
+              (rest num))
+             (conj acc (first num))))))
 ;; 11718
