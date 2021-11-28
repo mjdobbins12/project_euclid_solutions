@@ -25,5 +25,4 @@
   (loop [factor x]
     (if (is-prime? factor)
       factor
-      (recur (/ factor (smallest-factor x))))))
-;; 11718
+      (recur (/ factor (smallest-factor factor))))))
